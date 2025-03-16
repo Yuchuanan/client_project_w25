@@ -1,67 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Life - Basic Needs</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Life - Basic Needs</title>
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header>
-    <img src="images/sl-logo-long.png" alt="Logo" style="max-width: 250px; height: auto;">
-    <a href="#main-content">Skip to Main Content</a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page_1_CEW+.html">CEW+</a></li>
-            <li><a href="page_2_FirstGen.html">First Gen</a></li>
-            <li><a href="page_3_BasicNeeds.html">Basic Needs</a></li>
-        </ul>
-    </nav>
-    <h1>Student Life - Basic Needs</h1>
+  <img src="images/sl-logo-long.png" alt="Logo">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page_1_CEW+.html">CEW+</a></li>
+      <li><a href="page_2_FirstGen.html">First Gen</a></li>
+      <li><a href="page_3_BasicNeeds.html" class="active">Basic Needs</a></li>
+    </ul>
+  </nav>
+  <h1>Student Life - Basic Needs</h1>
 </header>
 
 <main id="main-content">
-    <section>
-        <h2>About Basic Needs</h2>
-        <img src="images/hero-bg.jpg" alt="Basic needs resources overview" style="max-width: 450px; height: auto;">
-        <p>The Basic Needs program at the University of Michigan is committed to ensuring that every student has access to the essential resources they need to succeed, including food, housing, and financial assistance. This initiative works to eliminate barriers so students can focus on their education and well-being.</p>
-    </section>
+  <section>
+    <h2>About Basic Needs</h2>
+    <img src="images/hero-bg.jpg" alt="Basic needs overview">
+    <p>The Basic Needs program at the University of Michigan...</p>
+  </section>
 
-    <section>
-        <h2>Key Services</h2>
-        <article>
-            <h3>Food Assistance</h3>
-            <img src="images/food.jpg" alt="Food pantry service" style="max-width: 450px; height: auto;">
-            <p>Access food pantries, meal programs, and emergency food assistance to ensure no student goes hungry.</p>
-        </article>
-        <article>
-            <h3>Housing Support</h3>
-            <img src="images/finance.jpg" alt="Housing assistance for students" style="max-width: 450px; height: auto;">
-            <p>Receive help with finding affordable housing, managing rent, and addressing housing instability.</p>
-        </article>
-        <article>
-            <h3>Financial Assistance</h3>
-            <img src="images/housingtransportation.jpg" alt="Financial aid support" style="max-width: 450px; height: auto;">
-            <p>Connect with financial aid resources, emergency funding, and budgeting workshops to manage expenses effectively.</p>
-        </article>
-    </section>
+  <section>
+    <h2>Key Services</h2>
+    <div class="grid-container">
+      <article class="grid-item">
+        <h3>Food Assistance</h3>
+        <img src="images/food.jpg" alt="Food pantry">
+        <p>Access food pantries...</p>
+      </article>
+      <article class="grid-item">
+        <h3>Housing Support</h3>
+        <img src="images/finance.jpg" alt="Housing assistance">
+        <p>Receive help with housing...</p>
+      </article>
+      <article class="grid-item">
+        <h3>Financial Assistance</h3>
+        <img src="images/housingtransportation.jpg" alt="Financial aid">
+        <p>Connect with financial aid...</p>
+      </article>
+    </div>
+  </section>
 
-    <section>
-        <h2>Resources</h2>
-        <img src="images/medicaid.jpg" alt="Resources for basic needs support" style="max-width: 450px; height: auto;">
-        <ul>
-            <li><a href="https://basicneeds.studentlife.umich.edu/">Visit Basic Needs Official Website</a></li>
-            <li>Learn more about campus and community food programs</li>
-            <li>Explore housing support services</li>
-            <li>Find financial literacy and emergency funding information</li>
-        </ul>
-    </section>
+  <section>
+    <h2>Resources</h2>
+    <img src="images/medicaid.jpg" alt="Resources">
+    <ul>
+      <li><a href="https://basicneeds.studentlife.umich.edu/">Basic Needs Website</a></li>
+    </ul>
+  </section>
 </main>
 
-<footer style="margin-top: 10em;">
-    <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising</a></p>
-</footer>
-
+<footer>
+    <div class="footer-container">
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://umich.edu/">University of Michigan</a></li>
+          <li><a href="https://www.si.umich.edu/">UMSI School of Information</a></li>
+          <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic Advising</a></li>
+          <li><a href="https://umich.edu/studentlife/">Student Life</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="page_1_CEW+.html">CEW+</a></li>
+          <li><a href="page_2_FirstGen.html">First Gen</a></li>
+          <li><a href="page_3_BasicNeeds.html">Basic Needs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://umich.edu/accessibility/">Accessibility</a></li>
+          <li><a href="https://umich.edu/privacy/">Privacy Policy</a></li>
+          <li><a href="https://umich.edu/contact/">Contact Us</a></li>
+          <li><a href="https://umich.edu/sitemap/">Site Map</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 University of Michigan. All rights reserved.</p>
+  </footer>
 </body>
 </html>
