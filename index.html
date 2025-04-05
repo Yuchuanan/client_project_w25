@@ -10,16 +10,23 @@
 <body>
 
 <header>
-  <img src="images/UMSI_signature_marketing_U_white.png" alt="UMSI Logo">
+  <img src="images/event_110537_original-1.png" alt="">
   <a href="#main-content" class="skip-link">Skip to Main Content</a>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="page_1_cew+.html">CEW+</a></li>
-      <li><a href="page_2_firstgen.html">First Gen</a></li>
-      <li><a href="page_3_basicneeds.html">Basic Needs</a></li>
-    </ul>
-  </nav>
+  <div class="header-top">
+    <nav>
+      <ul class="header-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="page_1_cew+.html">CEW+</a></li>
+        <li><a href="page_2_firstgen.html">First Gen</a></li>
+        <li><a href="page_3_basicneeds.html">Basic Needs</a></li>
+        <li class="dark-btn-li">
+          <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span id="toggle-icon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <h1>Student Success Portal</h1>
 </header>
 
@@ -58,40 +65,69 @@
 </main>
 
 <footer>
-    <div class="footer-container">
-      
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="https://umich.edu/">University of Michigan</a></li>
-          <li><a href="https://www.si.umich.edu/">UMSI School of Information</a></li>
-          <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic Advising</a></li>
-          <li><a href="https://studentlife.umich.edu/">Student Life</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="page_1_cew+.html">CEW+</a></li>
-          <li><a href="page_2_firstgen.html">First Gen</a></li>
-          <li><a href="page_3_basicneeds.html">Basic Needs</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="https://accessibility.umich.edu/">Accessibility</a></li>
-          <li><a href="https://umich.edu/privacy/">Privacy Policy</a></li>
-          <li><a href="https://umich.edu/contact/">Contact Us</a></li>
-          <li><a href="https://www.engin.umich.edu/sitemap/">Site Map</a></li>
-        </ul>
-      </div>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="https://umich.edu/">University of Michigan</a></li>
+        <li><a href="https://www.si.umich.edu/">UMSI School of Information</a></li>
+        <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic Advising</a></li>
+        <li><a href="https://studentlife.umich.edu/">Student Life</a></li>
+      </ul>
     </div>
-    <p class="copyright">&copy; 2025 University of Michigan. All rights reserved.</p>
-  </footer>
+    <div class="footer-section">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="page_1_cew+.html">CEW+</a></li>
+        <li><a href="page_2_firstgen.html">First Gen</a></li>
+        <li><a href="page_3_basicneeds.html">Basic Needs</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="https://accessibility.umich.edu/">Accessibility</a></li>
+        <li><a href="https://umich.edu/privacy/">Privacy Policy</a></li>
+        <li><a href="https://umich.edu/contact/">Contact Us</a></li>
+        <li><a href="https://www.engin.umich.edu/sitemap/">Site Map</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">&copy; <span id="current-year"></span> University of Michigan. All rights reserved.</p>
+</footer>
+
+<script>
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const toggleIcon = document.getElementById("toggle-icon");
+
+  darkModeToggle.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      toggleIcon.textContent = "☀️";
+      darkModeToggle.style.backgroundColor = "#fff";
+      darkModeToggle.style.color = "#000";
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      toggleIcon.textContent = "🌙";
+      darkModeToggle.style.backgroundColor = "#000";
+      darkModeToggle.style.color = "#fff";
+    }
+  });
   
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    toggleIcon.textContent = "☀️";
+    darkModeToggle.style.backgroundColor = "#fff";
+    darkModeToggle.style.color = "#000";
+  }
+</script>
+<script>
+  // Dynamically update the footer year
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  });
+</script>
 
 </body>
 </html>
