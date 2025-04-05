@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEW+ - Center for the Education of Women</title>
+  <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<header>
+  <img src="images/cewlogo.png" alt="">
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+  <div class="header-top">
+    <nav>
+      <ul class="header-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page_1_cew+.html" class="active">CEW+</a></li>
+        <li><a href="page_2_firstgen.html">First Gen</a></li>
+        <li><a href="page_3_basicneeds.html">Basic Needs</a></li>
+        <li class="dark-btn-li">
+          <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span id="toggle-icon">🌙</span>
+           </button>
+        </li>
+      </ul>
+     </nav>
+  </div>
+  <h1>Student Success Portal</h1>
+</header>
+
+<main id="main-content">
+  <section>
+    <h2>About CEW+</h2>
+    <img src="images/hi_home.jpg" alt="CEW+ services overview">
+    <p>CEW+ empowers women+ and underserved individuals in the University of Michigan and surrounding communities by serving as an advocate and providing resources to help individuals reach their academic, financial, and professional potential.</p>
+  </section>
+
+  <section>
+    <h2>Key Programs and Services</h2>
+    <div class="grid-container">
+      <article class="grid-item">
+        <h3>Scholarships and Fellowships</h3>
+        <img src="images/FEI-Series-2025-768x994.jpg" alt="Scholarship recipients">
+        <p>The CEW+ Scholarship application is now open for funding available in the Fall 2025, Winter 2026, and Spring/Summer 2026 semesters. </p>
+      </article>
+      <article class="grid-item">
+        <h3>Counseling and Coaching</h3>
+        <img src="images/UMSI_MHIClassroom_02202023_16.jpg" alt="Counseling session">
+        <p>O Appointment
+          We offer career, education, and emergency funding counseling appointments in person, over the phone, or via Zoom. </p>
+      </article>
+      <article class="grid-item">
+        <h3>Workshops and Events</h3>
+        <img src="images/UMSI_MSICampusTourOrientation_082422_07.jpg" alt="Workshop participants">
+        <p>View past presentations, webinars, and virtual workshops here.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resources</h2>
+    <img src="images/MCOMMONS-FinalsStudyLocations2024-09.jpg" alt="CEW+ resources">
+    <ul>
+      <li><a href="https://www.cew.umich.edu/">Visit CEW+ Official Website</a></li>
+      <li>Downloadable guides.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://umich.edu/">University of Michigan</a></li>
+          <li><a href="https://www.si.umich.edu/">UMSI School of Information</a></li>
+          <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">Academic Advising</a></li>
+          <li><a href="https://umich.edu/studentlife/">Student Life</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="page_1_cew+.html">CEW+</a></li>
+          <li><a href="page_2_firstgen.html">First Gen</a></li>
+          <li><a href="page_3_basicneeds.html">Basic Needs</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://umich.edu/accessibility/">Accessibility</a></li>
+          <li><a href="https://umich.edu/privacy/">Privacy Policy</a></li>
+          <li><a href="https://umich.edu/contact/">Contact Us</a></li>
+          <li><a href="https://umich.edu/sitemap/">Site Map</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">&copy; <span id="current-year"></span> University of Michigan. All rights reserved.</p>
+</footer>
+
+<script>
+  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  const toggleIcon = document.getElementById("toggle-icon");
+
+
+  darkModeToggle.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      toggleIcon.textContent = "☀️";  
+      darkModeToggle.style.backgroundColor = "#fff";
+      darkModeToggle.style.color = "#000";
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      toggleIcon.textContent = "🌙";
+      darkModeToggle.style.backgroundColor = "#000";
+      darkModeToggle.style.color = "#fff";
+    }
+  });
+  
+  if (localStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark-mode");
+    toggleIcon.textContent = "☀️";
+    darkModeToggle.style.backgroundColor = "#fff";
+    darkModeToggle.style.color = "#000";
+  }
+</script>
+<script>
+  // Dynamically update the footer year
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  });
+</script>
+
+</body>
+</html>
